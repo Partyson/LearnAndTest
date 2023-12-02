@@ -23,5 +23,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
     path('tests/', include('test_library.urls')),
-    path('create-test/', include('test_creator.urls'))
+    path('create-test/', include('test_creator.urls')),
+    path('workshop/', include('workshop.urls'))
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
