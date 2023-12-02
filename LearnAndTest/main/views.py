@@ -3,4 +3,4 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("<h4>работает?</h4>")
+    return render(request, 'main/web1.html')

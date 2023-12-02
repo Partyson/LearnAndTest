@@ -1,0 +1,474 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;     
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            align-items: center;
+        }
+        
+        .logo img{   
+            width: auto;
+            height: 155px;
+        }
+
+        header p{
+            color: #776FC4;
+            text-align: center;
+            font-family: 'Raleway', sans-serif;
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+       nav {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            flex-wrap: wrap;
+            align-items: center;
+            height: 100px;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        nav a {
+            color: #776FC4;
+            text-decoration: none;
+            margin: 0 15px;
+            height: 20px;
+            font-size: 18px;
+            position: relative;
+            overflow: hidden;
+
+        }
+
+        nav a::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: #776FC4;
+            opacity: 0;
+            transition: opacity 0.3s ease; 
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        nav a:hover::before {
+            opacity: 1; 
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer a::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: #776FC4;
+            opacity: 0;
+            transition: opacity 0.3s ease; /* Плавное изменение прозрачности */
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        footer a:hover::before {
+            opacity: 1; /* Мгновенно устанавливаем непрозрачность */
+        }
+
+        footer {
+            background-color: #DAD7FF;
+            position: flex; /* Фиксированное позиционирование */
+            
+            width: 100%; /* Ширина 100% */
+            text-align: center;
+            height: 160px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            font-family: 'Raleway', sans-serif;
+        }  
+        
+        footer a{ 
+            text-decoration: none;
+            color:#776FC4;
+            font-size: 20px;
+            margin: 0px 43px;
+
+        }   
+
+        footer a:nth-child(3){
+            margin-right:229px;
+        }
+
+        footer a:nth-child(4){
+            margin-right:5px;
+        }
+        
+        
+        main{
+          display: flex;
+            
+            flex-direction: column;
+            justify-content: center;
+            flex-shrink: 0;
+            flex: 1;
+
+        }
+        
+        main p{
+            color: #636363;
+            text-align: center;
+            font-family: 'Raleway', sans-serif;
+            font-size: 35px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        .panel {
+            width: 1180px;
+            height: 869px;
+            background-color: #DAD7FF;
+            padding: 20px; 
+            border-radius: 10px;
+            
+            font-family: Raleway;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+        }
+
+        .inner-rectangle {
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .text {
+            color: #636363;
+            text-align: center;
+            font-family: Raleway;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .rectangle-list{
+            display: flex;
+            height: calc(100% - 50px);
+            width: 150px;
+            padding: 25px;
+            background-color: #EAE8FF;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .rectangle-list-elem{
+            background-color: #DAD7FF;
+            width: 100%;
+            height: 90px;
+        }
+
+        .label-container{
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            align-items: center;
+        }
+
+        .label-container h2{
+            color: #636363;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;        
+            margin: 0 0 10px;
+            width: 102px;
+        }
+
+        .button-contain {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+          border: none;
+          color: #FFFFFF;
+          background: #776FC4;
+          text-align: center;
+          text-decoration: none;
+          font-size: 16px;
+          margin: 10px 5px;
+          cursor: pointer;
+            border-radius: 10px;
+
+
+        }
+
+        .button-contain:hover {
+            border-radius: 10px;
+            outline: 3px solid #D3D3D3;
+            background: #776FC4;
+        }
+
+        .button-contain:active {
+            background-color: #544E8C;
+        }
+
+        .button-contain:disabled {
+            background-color: #E1DEFF;
+            cursor: not-allowed;
+        }
+
+        .rectangle2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #EAE8FF;
+            color: #636363;
+            text-align: center;
+            font-family: Raleway;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .rectangle3{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            background-color: #EAE8FF;
+            color: #636363;
+            text-align: center;
+            font-family: Raleway;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .switch {
+          position: relative;
+          display: inline-block;
+          width: 170px;
+          height: 50px;
+        }
+
+        /* Hide default HTML checkbox */
+        .switch input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+
+        /* The slider */
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #EAE8FF;
+          -webkit-transition: .4s;
+          transition: .4s;
+
+        }
+
+        .slider:before {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            position: absolute;
+            content: "Text";
+            width: 90px;
+            height: 42px;
+            left: 4px;
+            bottom: 4px;
+            background-color: #776FC4;
+            -webkit-transition: .4s;
+            transition: .4s;
+            color: #FFF;
+            text-align: center;
+            font-family: Raleway;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        input:checked + .slider {
+          
+        }
+
+        input:focus + .slider {
+          
+        }
+
+        input:checked + .slider:before {
+          -webkit-transform: translateX(70px);
+          -ms-transform: translateX(70px);
+          transform: translateX(70px);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 30px;
+        }
+
+        .slider.round:before {
+          border-radius: 30px;
+        }
+
+        .button-image{
+            display: inline-block; /* Сделать элемент блочным, чтобы можно было задавать ширину и высоту */
+            border: none; /* Убираем границу кнопки */
+            padding: 0; /* Убираем внутренний отступ кнопки */
+            background: none; /* Убираем фон кнопки */
+            cursor: pointer; /* Изменяем курсор при наведении на кнопку */
+        }
+
+        .input-field {
+            text-align: center;
+            font-family: Raleway;
+            
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            border: none;
+            background: transparent;
+        }
+
+        .file-input {
+            display: none;
+        }
+
+        .circle {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%; /* Делаем элемент круглым */
+            display: inline-block;
+            margin: 10px; /* Расстояние между кругами */
+        }
+
+        .save-end-buttons{
+            display: flex;
+            justify-content: flex-end;
+        }
+    </style>
+</head>
+<body>
+        <nav>
+            <div class='logo'>
+                <img src="C:\Users\User\Desktop\logo.png">
+            </div>
+            <a href="#">Создатель тестов</a>
+            <a href="#">Библиотека</a>
+            <a href="#">Мастерская</a>
+            <a href="#">Регистрация</a>
+            <a href="#">Вход</a>
+        </nav>
+        
+    <header>  
+        
+    </header>
+    
+    <main>
+        <div class="save-end-buttons">
+            <button class="button-contain" style="width: 121px; height: 39px;">Сохранить</button>
+            <button class="button-contain" style="width: 121px; height: 39px;">Выйти</button>
+        </div>
+        <div class="panel">
+        <div class='label-container' style="width: 200px;">
+            <h2>Вопросы</h2>
+            <div class="inner-rectangle rectangle-list ">
+                <div class="inner-rectangle rectangle-list-elem text">
+                    <p class="text">Вопрос 1</p>
+                    <button class='button-image'><img src="C:\Users\User\Desktop\musor.svg" class="button-image" style="width: 13px;height: 15px;"></button>
+                </div>
+                <button class="button-contain" style="width: 60px;height: 25px;">+</button>
+            </div>
+        </div>
+    <div>
+        <div class='rectangle2 inner-rectangle' style="width: 650px;height: 65px;"><input type="text" class="input-field" style="font-size: 24px;" placeholder="Напишите ваш вопрос"></div>
+        <div class='rectangle2 inner-rectangle' style="width: 650px;height: 400px; background-color: #EAE8FF;">
+            <label for="file-upload" class="button-image"><img src="C:\Users\User\Desktop\Camera.svg"style="width: 140px;height: 140px;"></label>
+            <input type="file" id="file-upload" class="file-input">
+            <p>Загрузите фото</p>
+        </div>
+        
+        <div class="rectangle3 inner-rectangle"style="width: 316px;height: 66px; background-color: #EAE8FF;">
+            <div class="circle" style="background-color: #FF5F5F;"></div>
+            <input type="text" class="input-field" style="font-size: 16px;" placeholder="Добавить ответ 1">
+        </div>
+        <div class="rectangle3 inner-rectangle"style="width: 316px;height: 66px; background-color: #EAE8FF;">
+            <div class="circle" style="background-color: #94FF8B;"></div>
+            <input type="text" class="input-field" style="font-size: 16px;" placeholder="Добавить ответ 2">
+        </div>
+        <div class="rectangle3 inner-rectangle"style="width: 316px;height: 66px; background-color: #EAE8FF;">
+            <div class="circle" style="background-color: #FF8BFA;"></div>
+            <input type="text" class="input-field" style="font-size: 16px;" placeholder="Добавить ответ 3">
+            <button class='button-image'><img src="C:\Users\User\Desktop\musor.svg" style="width: 13px;height: 15px;"></button>
+        </div>
+        <div class="rectangle3 inner-rectangle"style="width: 316px;height: 66px; background-color: #EAE8FF;">
+            <div class="circle" style="background-color: #8BF8FF;"></div>
+            <input type="text" class="input-field" style="font-size: 16px;" placeholder="Добавить ответ 4">
+            <button class='button-image'><img src="C:\Users\User\Desktop\musor.svg" style="width: 13px;height: 15px;"></button>
+        </div>
+    </div>
+    <div>
+        <p class="text">Ограничение по времени</p>
+        <div>
+            <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </div>
+        <p class="text">Правильные ответы</p>
+        <div>
+            <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </div>
+        <button class="button-contain" style="width: 121px; height: 39px;margin-top: 558px;">Удалить</button>
+        <button class="button-contain" style="width: 121px; height: 39px;">Копировать</button>
+    </div>
+    </div>
+    </main>
+    
+    <footer>
+        <a href="#">Создатель тестов</a>
+        <a href="#">Библиотека</a>
+        <a href="#">Мастерская</a>
+        <a href="#">Наверх</a>
+        <img src="C:\Users\User\Desktop\strelka1.svg">
+    </footer>
+</body>
+</html>
