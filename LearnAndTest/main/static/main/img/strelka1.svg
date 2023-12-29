@@ -1,0 +1,19 @@
+<svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="24" height="20" fill="#E0E0E0"/>
+<g id="&#208;&#158; &#209;&#129;&#208;&#176;&#208;&#185;&#209;&#130;&#208;&#181;">
+<rect width="1920" height="1500" transform="translate(-1446 -1411)" fill="#F7F7FF"/>
+<g id="footer">
+<path id="Rectangle 2" d="M-1446 -71H474V89H-1446V-71Z" fill="#DAD7FF"/>
+<g id="arrow-right_10513322 1" clip-path="url(#clip0_0_1)">
+<path id="Vector" d="M10.892 0.566423L6.17505 4.34002L6.88205 4.90562L11.5 1.21122L11.5 19.4H12.5L12.5 1.21282L17.117 4.90642L17.824 4.34083L13.106 0.566423C12.496 0.0784245 11.502 0.0784245 10.892 0.566423Z" fill="#776FC4"/>
+</g>
+</g>
+<g id="header">
+</g>
+</g>
+<defs>
+<clipPath id="clip0_0_1">
+<rect width="19.2" height="24" fill="white" transform="matrix(0 -1 1 0 0 19.4)"/>
+</clipPath>
+</defs>
+</svg>

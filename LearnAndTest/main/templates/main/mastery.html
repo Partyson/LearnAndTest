@@ -1,0 +1,107 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>library</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="{% static 'main/css/workshop_style.css'%}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+        <nav>
+            <div class='logo'>
+                <img src="{% static 'main/img/logo.png'%}">
+            </div>
+            <a href="/test-creator">Создатель тестов</a>
+            <a href="/tests">Библиотека</a>
+            <a href="/workshop">Мастерская</a>
+            <a href="#">Регистрация</a>
+            <a href="#">Вход</a>
+        </nav>
+    <main>
+        <section>
+            <div class="search-filters">
+                Фильтры<img src="{% static 'main/img/filter.svg'%}" style="margin-left: 10px;">
+                <div class="search-panel">
+                    <p>Поиск</p>
+                    <img src="img\lupa.svg">
+                </div>
+            </div>
+            <div class="test-preview">
+                <div class="test-preview-item">
+                    <div class="photo">
+                        
+                    </div>
+                    <div class="name">
+                        <a href = '/test'>Название</a>
+                    </div>
+                    <div class="description">
+                        <p>Тема:тема</p>
+                        <p>Автор:автор</p>
+                    </div>
+                </div>
+                <div class="test-preview-item">
+                    <div class="photo">
+                        
+                    </div>
+                    <div class="name">
+                        <a href = '/test'>Название</a>
+                    </div>
+                    <div class="description">
+                        <p>Тема:тема</p>
+                        <p>Автор:автор</p>
+                    </div>
+                </div>
+                <div class="test-preview-item">
+                    <div class="photo">
+                        
+                    </div>
+                    <div class="name">
+                        <a href = '/test'>Название</a>
+                    </div>
+                    <div class="description">
+                        <p>Тема:тема</p>
+                        <p>Автор:автор</p>
+                    </div>
+                </div>
+                <div class="test-preview-item">
+                    <div class="photo">
+                        
+                    </div>
+                    <div class="name">
+                        <a href = '/test'>Название</a>
+                    </div>
+                    <div class="description">
+                        <p>Тема:тема</p>
+                        <p>Автор:автор</p>
+                    </div>
+                </div>
+                <div class="test-preview-item">
+                    <div class="photo">
+                        
+                    </div>
+                    <div class="name">
+                        <a href = '/test'>Название</a>
+                    </div>
+                    <div class="description">
+                        <p>Тема:тема</p>
+                        <p>Автор:автор</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <a href="/test-creator">Создатель тестов</a>
+            <a href="tests/">Библиотека</a>
+            <a href="workshop/">Мастерская</a>
+            <a href="#">Регистрация</a>
+            <a href="#">Вход</a>
+    </footer>
+</body>
+</html>

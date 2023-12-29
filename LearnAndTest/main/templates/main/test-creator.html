@@ -1,0 +1,214 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test creator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href= "{% static 'main/css/test_creator_style.css'%}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+        <nav>
+            <div class='logo'>
+                <img src="{% static 'test_creator/img/logo.png'%}">
+            </div>
+            <a href="/test-creator">Создатель тестов</a>
+            <a href="tests/">Библиотека</a>
+            <a href="workshop/">Мастерская</a>
+            <a href="#">Регистрация</a>
+            <a href="#">Вход</a>
+        </nav>
+        
+    <header>  
+        
+    </header>
+    
+    <main>
+        <section class='panel'>
+            <div class="questions">
+                <p>Вопросы</p> 
+                <div class="new-list">
+                    <div>
+                        <ul class="questions-list" id="quest-li">
+                            <li id="quest-elem" class="question"><p style="font-size: 14px;margin-top:0; margin-right: 24px;">Вопрос 1</p>
+                                <button  class='button-image'>
+                                    <img src="{% static 'test_creator/img/musor.svg'%}" class="button-image" style="width: 13px;height: 15px;">
+                                </button>
+                            </li>
+                        </ul>
+                    </div> 
+                    <button onclick="addElement('quest-elem', 'quest-li')" class="button-contain" style="width: 60px;height: 25px;">+</button>   
+                </div>     
+            </div>
+            <div class="main-menu">
+
+                <div class="photo-load" style="width: 650px;height: 65px;">
+                    <input type="text" class="input-field" style="font-size: 24px;" placeholder="Напишите ваш вопрос">
+                </div>
+
+                <div class='photo-load'>
+                    <label for="file-upload" class="button-image"><img src="{% static 'test_creator/img/Camera.svg'%}"style="width: 140px;height: 140px;"></label>
+                    <input type="file" id="file-upload" class="file-input">
+                    <p>Загрузите фото</p>
+                </div>
+
+                <div>
+                    <ul class="answers-list" id="answ-li">
+                        <li id="0" class="add-answer-buttons">
+                            <div class="circle" style="background-color: #FF5F5F;"></div>
+                            <input type="text" class="input-field" style="font-size: 16px;" placeholder="Добавить ответ 1">
+                            <img src="{% static 'test_creator/img/musor.svg'%}" class="button-image" style="width: 13px;height: 15px; opacity: 0; margin-right: 24px;">
+                        </li>
+                        <li id="1"  class="add-answer-buttons">
+                            <div class="circle" style="background-color: #94FF8B;"></div>
+                            <input type="text" class="input-field" style="font-size: 16px;" placeholder="Добавить ответ 2">
+                            <img src="{% static 'test_creator/img/musor.svg'%}" class="button-image" style="width: 13px;height: 15px;opacity: 0; margin-right: 24px;">
+                        </li>
+                        <li id="2" class="add-answer-buttons">
+                            <div class="circle" style="background-color: #FF8BFA;"></div>
+                            <input type="text" class="input-field" style="font-size: 16px;" placeholder="Добавить ответ 3">
+                            <img  src="{% static 'test_creator/img/musor.svg'%}" class="button-image" style="width: 13px;height: 15px; margin-right: 24px;">
+                        </li>
+                        <li id="3" class="add-answer-buttons"><div class="circle" style="background-color: #8BF8FF;"></div>
+                            <input type="text" class="input-field" style="font-size: 16px;" placeholder="Добавить ответ 4">
+                            <img  src="{% static 'test_creator/img/musor.svg'%}" class="button-image" style="width: 13px;height: 15px; margin-right: 24px;">
+                        </li>
+                    </ul>
+                </div>
+                <button onclick="addElement2('1', 'answ-li')" style="border: none; cursor: pointer; outline: none;" class='add-answer-buttons text1'><div class="circle" style="background-color: #8BF8FF; "></div>Добавить ответ<img src="img\musor.svg" class="button-image" style="width: 13px;height: 15px; opacity: 0; margin-right: 24px;"></button>
+
+                <div class='end-start-buttons'>
+                    <button class="button-contain" style="width: 121px; height: 39px;">Сохранить</button>
+                    <button class="button-contain" style="width: 121px; height: 39px;">Выйти</button>
+                </div>
+                </div>
+            <div class="active-buttons">
+                <div>
+                    <div class="time-limit">
+                        <p>Ограничение по времени</p> 
+                        <label class="switch">
+                        <input class="check" type="checkbox">
+                        <span class="slider round"></span>
+                    </div>
+                    <p>Правильные ответы</p>
+                    <div class="true-answers">
+                        <label class="switch">
+                        <input class="check" type="checkbox">
+                        <span class="slider round"></span>
+                    </div>
+                </div>
+                <div>
+                    <button class="button-contain" style="width: 121px; height: 39px; margin-bottom: 9px;">Удалить</button>
+                    <button class="button-contain" style="width: 121px; height: 39px;">Копировать</button>
+                </div>
+            </div> 
+        </section>
+    </main>
+    
+    <footer>
+        <a href="/test-creator">Создатель тестов</a>
+            <a href="tests/">Библиотека</a>
+            <a href="workshop/">Мастерская</a>
+            <a href="#">Регистрация</a>
+            <a href="#">Вход</a>
+    </footer>
+
+    <script>
+    function addElement(classchild, idparent) {
+
+        var Elements = document.querySelectorAll(".question");
+
+        var Element = Elements[Elements.length-1];
+
+        var parentElement = document.getElementById("quest-li");
+
+        let newElement = Element.cloneNode(true);
+
+        let p = newElement.querySelector("p");
+
+        var existingElementContent = p.innerHTML;
+
+        var match = existingElementContent.match(/\d+/);
+
+        var number = match ? parseInt(match[0]) + 1 : 1;
+
+        p.innerHTML = "Вопрос " + number;
+
+        parentElement.appendChild(newElement);
+
+        readbuttons2()
+    }
+
+    function removeElement() {
+        var element = document.querySelector(".add-answer-buttons");
+        var parentElement = element.parentNode;
+        var removeElement = this.parentNode;
+        parentElement.removeChild(removeElement);
+    }
+
+    var buttons;
+
+    function readbuttons() {
+        var buttons = document.querySelectorAll(".add-answer-buttons img");
+            for (var i = 0, len = buttons.length; i < len; i++) {
+            buttons[i].addEventListener("click", removeElement);
+        };
+    }
+
+    readbuttons()
+
+    function removeElement2() {
+        var element2 = document.querySelector(".question");
+        var parentElement2 = element2.parentNode;
+        var removeElement2 = this.parentNode;
+        parentElement2.removeChild(removeElement2);
+    }
+
+    var buttons2;
+
+    function readbuttons2() {
+        buttons2 = document.querySelectorAll(".question button");
+        for (var i = 0, len = buttons2.length; i < len; i++) {
+            buttons2[i].addEventListener("click", removeElement2);
+        };
+    }
+
+
+
+    readbuttons2()
+
+    function addElement2(classchild, idparent) {
+
+        var Elements = document.querySelectorAll(".add-answer-buttons");
+
+        var Element = Elements[Elements.length-2];
+
+        var parentElement = document.getElementById("answ-li");
+
+        let newElement = Element.cloneNode(true);
+
+         console.log(newElement)
+
+        let p = newElement.querySelector(".input-field");
+
+        console.log(p)
+
+        var existingElementContent = p.placeholder;
+
+        var match = existingElementContent.match(/\d+/);
+
+        var number = match ? parseInt(match[0]) + 1 : 1;
+
+        p.placeholder = "Добавить ответ " + number;
+
+        parentElement.appendChild(newElement);
+
+        readbuttons()
+    }
+    </script>
+</body>
+</html>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website</title>
+    <title>main page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -25,7 +25,7 @@
             height: 155px;
         }
 
-        .piska{
+        .About{
             color: #776FC4;
             text-align: center;
             
@@ -38,12 +38,13 @@
 
        nav {
             display: flex;
+            width: 100%;
             justify-content: center;
             padding: 10px;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
             align-items: center;
             height: 100px;
-            
+            margin-top: 24px;
         }
 
         nav a {
@@ -53,8 +54,6 @@
             height: 20px;
             font-size: 18px;
             position: relative;
-            overflow: hidden;
-
         }
 
         nav a::before {
@@ -80,7 +79,6 @@
             margin: 0 15px;
             font-size: 18px;
             position: relative;
-            overflow: hidden;
         }
 
         footer a::before {
@@ -90,21 +88,20 @@
             height: 2px;
             background: #776FC4;
             opacity: 0;
-            transition: opacity 0.3s ease; /* Плавное изменение прозрачности */
+            transition: opacity 0.3s ease;
             position: absolute;
             bottom: 0;
             left: 0;
         }
 
         footer a:hover::before {
-            opacity: 1; /* Мгновенно устанавливаем непрозрачность */
+            opacity: 1; 
         }
 
         footer {
             background-color: #DAD7FF;
-            position: flex; /* Фиксированное позиционирование */
-            
-            width: 100%; /* Ширина 100% */
+            position: flex;
+            width: 100%;
             text-align: center;
             height: 160px;
             flex-shrink: 0;
@@ -112,7 +109,6 @@
             align-items: center;
             justify-content: center;
             align-content: center;
-            
         }  
         
         footer a{ 
@@ -165,27 +161,27 @@
 <body>
         <nav>
             <div class='logo'>
-                <img src="C:\Users\User\Desktop\logo.png">
+                <img src="static/main/img/logo.png">
             </div>
-            <a href="/create-test">Создатель тестов</a>
-            <a href="#">Библиотека</a>
-            <a href="#">Мастерская</a>
+            <a href="/test-creator">Создатель тестов</a>
+            <a href="tests/">Библиотека</a>
+            <a href="workshop/">Мастерская</a>
             <a href="#">Регистрация</a>
             <a href="#">Вход</a>
         </nav>
     
     <main>
-        <p class="piska" style="margin-top: ;">О сайте</p>
+        <p class="About" style="margin-top: ;">О сайте</p>
         <hr>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lectus risus, finibus ornare vestibulum et, feugiat quis dui. Vivamus sit amet dolor et magna facilisis rhoncus</p>
     </main>
     
     <footer>
-        <a href="#">Создатель тестов</a>
-        <a href="#">Библиотека</a>
-        <a href="#">Мастерская</a>
-        <a href="#">Наверх</a>
-        <img src="C:\Users\User\Desktop\strelka1.svg">
+        <a href="/test-creator">Создатель тестов</a>
+            <a href="tests/">Библиотека</a>
+            <a href="workshop/">Мастерская</a>
+            <a href="#">Регистрация</a>
+            <a href="#">Вход</a>
     </footer>
 </body>
 </html>

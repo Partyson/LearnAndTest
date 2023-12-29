@@ -1,0 +1,90 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>library</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="{% static 'main/css/test_library_style.css'%}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+        <nav>
+            <div class='logo'>
+                <img src="{% static 'main/img/logo.png'%}">
+            </div>
+            <a href="/test-creator">Создатель тестов</a>
+            <a href="/tests">Библиотека</a>
+            <a href="/workshop">Мастерская</a>
+            <a href="#">Регистрация</a>
+            <a href="#">Вход</a>
+        </nav>
+        
+    <header>  
+        
+    </header>
+    
+    <main>
+        <section class="main-content">
+            <div class="pages">
+                <button class="button-contain switch-buttons">Мои тесты</button>
+                <button class="button-contain switch-buttons">Сохраненные тесты</button>
+            </div>
+            <div>
+                <div class="search">
+                    <div class="search-view">поиск</div>
+                    <button class="button-contain active-buttons">Создать</button>
+                </div>
+                <div class="test-list">
+                    <div class="tests">
+                        <div class="test-preview"></div>
+                        <div class="test-info">
+                            <p class="naming"><strong style="font-weight: 600;">Название:</strong> название</p>
+                            <p><strong>Автор:</strong> автор</p>
+                            <p><strong>Тема:</strong> тема</p>
+                        </div>
+                        <div class="replace">
+                            <div class="panel-buttons">
+                                <button class="button-contain active-buttons">Редактировать</button>
+                                <button class="button-contain active-buttons">Старт</button>
+                            </div>
+                            <div class="delete-test">
+                                <button class='button-image'>Удалить<img src="{% static 'main/img/musor.svg'%}" class="button-image" style="width: 13px;height: 15px;"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tests">
+                        <div class="test-preview"></div>
+                        <div class="test-info">
+                            <p class="naming"><strong style="font-weight: 600;">Название:</strong> название</p>
+                            <p><strong>Автор:</strong> автор</p>
+                            <p><strong>Тема:</strong> тема</p>
+                        </div>
+                        <div class="replace">
+                            <div class="panel-buttons">
+                                <button class="button-contain active-buttons">Редактировать</button>
+                                <button class="button-contain active-buttons">Старт</button>
+                            </div>
+                            <div class="delete-test">
+                                <button class='button-image'>Удалить<img src="{% static 'main/img/musor.svg'%}" class="button-image" style="width: 13px;height: 15px;"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <a href="/test-creator">Создатель тестов</a>
+            <a href="/tests">Библиотека</a>
+            <a href="/workshop">Мастерская</a>
+            <a href="#">Регистрация</a>
+            <a href="#">Вход</a>
+        <img src="{% static 'main/img/strelka1.svg'%}">
+    </footer>
+</body>
+</html>   

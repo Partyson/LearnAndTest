@@ -45,3 +45,12 @@ class Answers(models.Model):
 
     class Meta:
         verbose_name_plural = 'Answers'
+
+
+class Students(models.Model):
+    name = models.CharField(max_length=100)
+    surname = models.CharField(max_length=100)
+    session_id = models.IntegerField()
+
+    class Meta:
+        verbose_name_plural = 'Students'
