@@ -12,16 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-        <nav>
-            <div class='logo'>
-                <img src="{% static 'main/img/logo.png'%}">
-            </div>
-            <a href="/test-creator">Создатель тестов</a>
-            <a href="/tests">Библиотека</a>
-            <a href="/workshop">Мастерская</a>
-            <a href="#">Регистрация</a>
-            <a href="#">Вход</a>
-        </nav>
+        {% include 'main/nav.html' %}
     <main>
         <section>
             <div class="search-filters">
@@ -97,11 +88,7 @@
     </main>
     
     <footer>
-        <a href="/test-creator">Создатель тестов</a>
-            <a href="tests/">Библиотека</a>
-            <a href="workshop/">Мастерская</a>
-            <a href="#">Регистрация</a>
-            <a href="#">Вход</a>
+        {% include 'main/nav-link.html' %}
     </footer>
 </body>
 </html>

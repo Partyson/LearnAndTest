@@ -12,16 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-        <nav>
-            <div class='logo'>
-                <img src="{% static 'test_creator/img/logo.png'%}">
-            </div>
-            <a href="/test-creator">Создатель тестов</a>
-            <a href="tests/">Библиотека</a>
-            <a href="workshop/">Мастерская</a>
-            <a href="#">Регистрация</a>
-            <a href="#">Вход</a>
-        </nav>
+        {% include 'main/nav.html' %}
         
     <header>  
         
@@ -36,7 +27,7 @@
                         <ul class="questions-list" id="quest-li">
                             <li id="quest-elem" class="question"><p style="font-size: 14px;margin-top:0; margin-right: 24px;">Вопрос 1</p>
                                 <button  class='button-image'>
-                                    <img src="{% static 'test_creator/img/musor.svg'%}" class="button-image" style="width: 13px;height: 15px;">
+                                    <img src="{% static 'main/img/musor.svg'%}" class="button-image" style="width: 13px;height: 15px;">
                                 </button>
                             </li>
                         </ul>
@@ -51,7 +42,7 @@
                 </div>
 
                 <div class='photo-load'>
-                    <label for="file-upload" class="button-image"><img src="{% static 'test_creator/img/Camera.svg'%}"style="width: 140px;height: 140px;"></label>
+                    <label for="file-upload" class="button-image"><img src="{% static 'main/img/Camera.svg'%}"style="width: 140px;height: 140px;"></label>
                     <input type="file" id="file-upload" class="file-input">
                     <p>Загрузите фото</p>
                 </div>
@@ -61,21 +52,21 @@
                         <li id="0" class="add-answer-buttons">
                             <div class="circle" style="background-color: #FF5F5F;"></div>
                             <input type="text" class="input-field" style="font-size: 16px;" placeholder="Добавить ответ 1">
-                            <img src="{% static 'test_creator/img/musor.svg'%}" class="button-image" style="width: 13px;height: 15px; opacity: 0; margin-right: 24px;">
+                            <img src="{% static 'main/img/musor.svg'%}" class="button-image" style="width: 13px;height: 15px; opacity: 0; margin-right: 24px;">
                         </li>
                         <li id="1"  class="add-answer-buttons">
                             <div class="circle" style="background-color: #94FF8B;"></div>
                             <input type="text" class="input-field" style="font-size: 16px;" placeholder="Добавить ответ 2">
-                            <img src="{% static 'test_creator/img/musor.svg'%}" class="button-image" style="width: 13px;height: 15px;opacity: 0; margin-right: 24px;">
+                            <img src="{% static 'main/img/musor.svg'%}" class="button-image" style="width: 13px;height: 15px;opacity: 0; margin-right: 24px;">
                         </li>
                         <li id="2" class="add-answer-buttons">
                             <div class="circle" style="background-color: #FF8BFA;"></div>
                             <input type="text" class="input-field" style="font-size: 16px;" placeholder="Добавить ответ 3">
-                            <img  src="{% static 'test_creator/img/musor.svg'%}" class="button-image" style="width: 13px;height: 15px; margin-right: 24px;">
+                            <img  src="{% static 'main/img/musor.svg'%}" class="button-image" style="width: 13px;height: 15px; margin-right: 24px;">
                         </li>
                         <li id="3" class="add-answer-buttons"><div class="circle" style="background-color: #8BF8FF;"></div>
                             <input type="text" class="input-field" style="font-size: 16px;" placeholder="Добавить ответ 4">
-                            <img  src="{% static 'test_creator/img/musor.svg'%}" class="button-image" style="width: 13px;height: 15px; margin-right: 24px;">
+                            <img  src="{% static 'main/img/musor.svg'%}" class="button-image" style="width: 13px;height: 15px; margin-right: 24px;">
                         </li>
                     </ul>
                 </div>
@@ -101,20 +92,12 @@
                         <span class="slider round"></span>
                     </div>
                 </div>
-                <div>
-                    <button class="button-contain" style="width: 121px; height: 39px; margin-bottom: 9px;">Удалить</button>
-                    <button class="button-contain" style="width: 121px; height: 39px;">Копировать</button>
-                </div>
             </div> 
         </section>
     </main>
     
     <footer>
-        <a href="/test-creator">Создатель тестов</a>
-            <a href="tests/">Библиотека</a>
-            <a href="workshop/">Мастерская</a>
-            <a href="#">Регистрация</a>
-            <a href="#">Вход</a>
+        {% include 'main/nav-link.html' %}
     </footer>
 
     <script>

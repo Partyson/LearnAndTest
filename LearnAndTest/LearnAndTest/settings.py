@@ -32,9 +32,6 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'main',
-    'test_library',
-    'test_creator',
-    'workshop',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

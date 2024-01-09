@@ -25,6 +25,8 @@ urlpatterns = [
     path('tests/', include('main.urls')),
     path('test-creator/', include('main.urls')),
     path('workshop/', include('main.urls')),
-    path('test/', include('main.urls'))
+    path('test/', include('main.urls')),
+    path('register/', include('main.urls')),
+    path('login/', include('main.urls'))
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

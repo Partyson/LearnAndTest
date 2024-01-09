@@ -1,3 +1,4 @@
+{% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +34,6 @@
             font-style: normal;
             font-weight: 500;
             line-height: normal;
-            margin-bottom: 90px;
         }
 
        nav {
@@ -132,7 +132,6 @@
           display: flex;
             width: 50%;
             flex-direction: column;
-            justify-content: center;
             flex-shrink: 0;
             flex: 1;
         }
@@ -147,23 +146,29 @@
             margin: 0;
 
         }
-
-        hr{
-            border: 0;
-            width: 500px;
-            height: 2px;
-            background: #776FC4;
-            align: center;  
-            margin-bottom: 90px;
-        }
     </style>
 </head>
 <body>
         {% include 'main/nav.html' %}
+    
     <main>
-        <p class="About" style="margin-top: ;">О сайте</p>
-        <hr>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lectus risus, finibus ornare vestibulum et, feugiat quis dui. Vivamus sit amet dolor et magna facilisis rhoncus</p>
+        <p class = "About">Добро пожаловать</p>
+        <form method="post">
+            <form action="register/" method="post">
+                {% csrf_token %}
+                <label for="user_name">Имя пользователя</label><br>
+                <input type="text" id="user_name" name="first_name"><br>
+                <label for="first_name">Имя</label><br>
+                <input type="text" id="first_name" name="first_name"><br>
+                <label for="last_name">Фамилия</label><br>
+                <input type="text" id="last_name" name="last_name"><br>
+                <label for="email">Электронная почта</label><br>
+                <input type="email" id="email" name="email"><br>
+                <label for="password">Пароль</label><br>
+                <input type="password" id="password" name="password"><br>
+                <input type="submit" value="Зарегистрироваться">
+            </form>
+           </form>
     </main>
     
     <footer>

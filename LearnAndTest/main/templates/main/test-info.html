@@ -198,16 +198,7 @@
     </style>
   </head>
   <body>
-  	<nav>
-      <div class='logo'>
-        <img src="{% static 'test_creator/img/logo.png'%}">
-      </div>
-      <a href="/test-creator">Создатель тестов</a>
-            <a href="tests/">Библиотека</a>
-            <a href="workshop/">Мастерская</a>
-            <a href="#">Регистрация</a>
-            <a href="#">Вход</a>
-    </nav>
+  	{% include 'main/nav.html' %}
     <main>
 
         <section class="test-view">
@@ -229,12 +220,7 @@
         </section>
     </main>
     <footer>
-        <a href="/test-creator">Создатель тестов</a>
-            <a href="tests/">Библиотека</a>
-            <a href="workshop/">Мастерская</a>
-            <a href="#">Регистрация</a>
-            <a href="#">Вход</a>
-        <img src="img\strelka1.svg">
+        {% include 'main/nav-link.html' %}
     </footer>
   </body>
 </html>
